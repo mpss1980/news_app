@@ -1,4 +1,4 @@
-package br.com.coupledev.newsapp.ui.adapters
+package br.com.coupledev.newsapp.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import br.com.coupledev.newsapp.data.models.Article
+import br.com.coupledev.newsapp.models.Article
 import br.com.coupledev.newsapp.databinding.ItemArticlePreviewBinding
 import com.bumptech.glide.Glide
 

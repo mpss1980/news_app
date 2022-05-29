@@ -1,4 +1,4 @@
-package br.com.coupledev.newsapp.data.api
+package br.com.coupledev.newsapp.api
 
 import br.com.coupledev.newsapp.util.Constants.Companion.BASE_URL
 import okhttp3.OkHttpClient

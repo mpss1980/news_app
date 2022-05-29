@@ -1,6 +1,6 @@
-package br.com.coupledev.newsapp.data.api
+package br.com.coupledev.newsapp.api
 
-import br.com.coupledev.newsapp.data.models.NewsResponse
+import br.com.coupledev.newsapp.models.NewsResponse
 import br.com.coupledev.newsapp.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

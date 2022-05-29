@@ -1,4 +1,4 @@
-package br.com.coupledev.newsapp.data.models
+package br.com.coupledev.newsapp.models
 
 data class Source(
     val id: String,

@@ -1,11 +1,11 @@
-package br.com.coupledev.newsapp.data.db
+package br.com.coupledev.newsapp.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import br.com.coupledev.newsapp.data.models.Article
+import br.com.coupledev.newsapp.models.Article
 
 @Database(
     entities = [Article::class],

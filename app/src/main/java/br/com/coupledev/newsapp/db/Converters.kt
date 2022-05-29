@@ -1,7 +1,7 @@
-package br.com.coupledev.newsapp.data.db
+package br.com.coupledev.newsapp.db
 
 import androidx.room.TypeConverter
-import br.com.coupledev.newsapp.data.models.Source
+import br.com.coupledev.newsapp.models.Source
 
 class Converters {
 
