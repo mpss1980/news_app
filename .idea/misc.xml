@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.203125" />
         <entry key="app/src/main/res/layout/activity_news.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_article.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.11854103343465046" />
         <entry key="app/src/main/res/layout/fragment_breaking_news.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_saved_news.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_search_news.xml" value="0.4036458333333333" />
