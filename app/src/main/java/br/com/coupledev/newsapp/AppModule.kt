@@ -7,6 +7,7 @@ import br.com.coupledev.newsapp.data.db.ArticleDatabase
 import br.com.coupledev.newsapp.data.repositories.NewsRepositoryImpl
 import br.com.coupledev.newsapp.domain.repositories.NewsRepository
 import br.com.coupledev.newsapp.domain.usecases.GetBreakingNewsUseCase
+import br.com.coupledev.newsapp.domain.usecases.SearchNewsUseCase
 import br.com.coupledev.newsapp.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -58,5 +59,11 @@ object AppModule {
     @Singleton
     fun providesGetBreakingNewsUsecase(repository: NewsRepository): GetBreakingNewsUseCase {
         return GetBreakingNewsUseCase(repository)
+    }
+
+    @Provides
+    @Singleton
+    fun providesSearchNewsUsecase(repository: NewsRepository): SearchNewsUseCase {
+        return SearchNewsUseCase(repository)
     }
 }
