@@ -1,5 +1,9 @@
 package br.com.coupledev.newsapp.domain.entities
 
+import androidx.annotation.Keep
+import java.io.Serializable
+
+@Keep
 data class Article(
     var id: Int? = null,
     val author: String? = "",
@@ -10,4 +14,4 @@ data class Article(
     val title: String? = "",
     val url: String? = "",
     val urlToImage: String? = ""
-)
+): Serializable
