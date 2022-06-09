@@ -1,8 +1,8 @@
 package br.com.coupledev.newsapp.data.db
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import br.com.coupledev.newsapp.data.models.ArticleModel
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ArticleDao {
@@ -11,7 +11,7 @@ interface ArticleDao {
     suspend fun updateAndInsertArticle(article: ArticleModel): Long
 
     @Query("SELECT * FROM articles")
-    fun getAllArticles(): LiveData<List<ArticleModel>>
+    fun getAllArticles(): Flow<List<ArticleModel>>
 
     @Delete
     suspend fun deleteArticle(article: ArticleModel)
