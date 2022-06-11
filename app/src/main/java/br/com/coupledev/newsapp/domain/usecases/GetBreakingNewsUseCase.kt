@@ -1,6 +1,6 @@
 package br.com.coupledev.newsapp.domain.usecases
 
-import br.com.coupledev.newsapp.domain.entities.NewsResponse
+import br.com.coupledev.newsapp.domain.entities.NewsResponseEntity
 import br.com.coupledev.newsapp.domain.failures.GetFailure
 import br.com.coupledev.newsapp.domain.repositories.NewsRepository
 import br.com.coupledev.newsapp.util.Resource
@@ -12,7 +12,7 @@ class GetBreakingNewsUseCase @Inject constructor(
     private val repository: NewsRepository
 ) {
 
-    operator fun invoke(countryCode: String, pageNumber: Int): Flow<Resource<NewsResponse>> = flow {
+    operator fun invoke(countryCode: String, pageNumber: Int): Flow<Resource<NewsResponseEntity>> = flow {
         if (pageNumber < 0) emit(Resource.Error("pageNumber should be greater than 0"))
         try {
             emit(Resource.Loading())

@@ -1,6 +1,6 @@
 package br.com.coupledev.newsapp.data.api
 
-import br.com.coupledev.newsapp.data.models.NewsResponseModel
+import br.com.coupledev.newsapp.data.models.NewsResponse
 import br.com.coupledev.newsapp.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
@@ -16,7 +16,7 @@ interface NewsApi {
         pageNumber: Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY
-    ): Response<NewsResponseModel>
+    ): Response<NewsResponse>
 
     @GET("v2/everything")
     suspend fun searchForNews(
@@ -26,5 +26,5 @@ interface NewsApi {
         pageNumber: Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY
-    ): Response<NewsResponseModel>
+    ): Response<NewsResponse>
 }

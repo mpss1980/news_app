@@ -51,6 +51,6 @@
         tools:layout="@layout/fragment_article" >
         <argument
             android:name="article"
-            app:argType="br.com.coupledev.newsapp.domain.entities.Article" />
+            app:argType="br.com.coupledev.newsapp.domain.entities.ArticleEntity" />
     </fragment>
 </navigation>

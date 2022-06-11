@@ -3,10 +3,10 @@ package br.com.coupledev.newsapp.data.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import br.com.coupledev.newsapp.data.models.ArticleModel
+import br.com.coupledev.newsapp.data.models.Article
 
 @Database(
-    entities = [ArticleModel::class],
+    entities = [Article::class],
     version = 1
 )
 @TypeConverters(Converters::class)

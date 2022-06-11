@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.coupledev.newsapp.R
 import br.com.coupledev.newsapp.databinding.FragmentSavedNewsBinding
 import br.com.coupledev.newsapp.presentation.news.adapters.NewsAdapter
-import br.com.coupledev.newsapp.presentation.news.viewmodels.ArticleViewModel
+import br.com.coupledev.newsapp.presentation.news.events.ArticleEvent
 import br.com.coupledev.newsapp.presentation.news.viewmodels.SavedNewsViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -60,10 +60,10 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
                 val article = newsAdapter.differ.currentList[position]
-                viewModel.deleteArticle(article)
+                viewModel.onEvent(ArticleEvent.DeleteArticle(article))
                 Snackbar.make(view, "Successfully deleted article", Snackbar.LENGTH_LONG).apply {
                     setAction("Undo") {
-                        viewModel.saveArticle(article)
+                        viewModel.onEvent(ArticleEvent.SaveArticle(article))
                     }
                     show()
                 }
@@ -77,16 +77,8 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collectLatest { state ->
-                    if (state.error.isNotEmpty()) {
-                        state.error.let { message ->
-                            Log.e(TAG, "An error occurred: $message")
-                        }
-                    }
-                    if (state.articles != null) {
-                        state.articles.let { articles ->
-                            newsAdapter.differ.submitList(articles)
-                        }
-                    }
+                    println(state)
+                    newsAdapter.differ.submitList(state.articles)
                 }
             }
         }

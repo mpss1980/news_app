@@ -4,13 +4,13 @@ import androidx.annotation.Keep
 import java.io.Serializable
 
 @Keep
-data class Article(
+data class ArticleEntity(
     var id: Int? = null,
     val author: String? = "",
     val content: String? = "",
     val description: String? = "",
     val publishedAt: String? = "",
-    val source: Source,
+    val sourceEntity: SourceEntity,
     val title: String? = "",
     val url: String? = "",
     val urlToImage: String? = ""

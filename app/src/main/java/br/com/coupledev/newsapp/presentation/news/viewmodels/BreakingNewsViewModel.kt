@@ -1,9 +1,7 @@
 package br.com.coupledev.newsapp.presentation.news.viewmodels
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import br.com.coupledev.newsapp.domain.entities.NewsResponse
 import br.com.coupledev.newsapp.domain.usecases.GetBreakingNewsUseCase
 import br.com.coupledev.newsapp.presentation.news.states.NewsResponseState
 import br.com.coupledev.newsapp.util.Resource
@@ -12,7 +10,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel

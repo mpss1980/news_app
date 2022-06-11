@@ -75,7 +75,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
                     if (state.news != null) {
                         hideProgressBar()
                         state.news.let { news ->
-                            newsAdapter.differ.submitList(news.articles)
+                            newsAdapter.differ.submitList(news.articleEntities)
                         }
                     }
                 }

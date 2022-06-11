@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.coupledev.newsapp.R
 import br.com.coupledev.newsapp.presentation.news.adapters.NewsAdapter
 import br.com.coupledev.newsapp.databinding.FragmentBreakingNewsBinding
-import br.com.coupledev.newsapp.presentation.news.states.NewsResponseState
 import br.com.coupledev.newsapp.presentation.news.viewmodels.BreakingNewsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -58,7 +57,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
                     if (state.news != null) {
                         hideProgressBar()
                         state.news.let { news ->
-                            newsAdapter.differ.submitList(news.articles)
+                            newsAdapter.differ.submitList(news.articleEntities)
                         }
                     }
                 }

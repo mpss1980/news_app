@@ -1,7 +1,7 @@
 package br.com.coupledev.newsapp.domain.entities
 
-data class NewsResponse(
-    val articles: List<Article>,
+data class NewsResponseEntity(
+    val articleEntities: List<ArticleEntity>,
     val status: String,
     val totalResults: Int
 )
